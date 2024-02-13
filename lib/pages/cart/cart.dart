@@ -37,6 +37,12 @@ class _CartPagesState extends State<CartPages> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(width: 1, color: Colors.grey)),
+                    child: const Center(
+                      child: Icon(
+                        Icons.arrow_back,
+                        size: 20,
+                      ),
+                    ),
                   ),
                   const Text(
                     "My Cart",
@@ -143,7 +149,7 @@ class _CartPagesState extends State<CartPages> {
                       padding: const EdgeInsets.only(bottom: 8.0),
                       child: SizedBox(
                         width: double.maxFinite,
-                        height: 45,
+                        height: 50,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -152,6 +158,7 @@ class _CartPagesState extends State<CartPages> {
                           child: const Text(
                             "Checkout",
                             style: TextStyle(
+                                fontSize: 16,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600),
                           ),

@@ -11,38 +11,35 @@ class CartItem extends StatelessWidget {
       height: 120,
       child: Row(
         children: [
-          // IMAGE
           Container(
             width: 130,
             height: double.infinity,
             margin: const EdgeInsets.only(right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              image: const DecorationImage(
-                image: AssetImage("assets/burger.jpg"),
+              image: DecorationImage(
+                image: AssetImage(
+                    index == 0 ? "assets/burger.jpg" : "assets/pizza.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
           ),
-
-          // DETAILS
-
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 8.0),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
-                    "Cheese Hot\nHamburger",
-                    style: TextStyle(
+                    index == 0 ? "Cheese Hot\nHamburger" : "Italian Hot\nPizza",
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Text(
-                  "\$22.99",
+                  index == 0 ? "\$22.99" : "\$15.02",
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey.shade600,
