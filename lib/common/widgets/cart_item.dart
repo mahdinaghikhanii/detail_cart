@@ -17,9 +17,9 @@ class CartItem extends StatelessWidget {
             height: double.infinity,
             margin: const EdgeInsets.only(right: 20),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: NetworkImage("https://picsum.photos/seed/$index/200/300"),
+              borderRadius: BorderRadius.circular(15),
+              image: const DecorationImage(
+                image: AssetImage("assets/burger.jpg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -42,7 +42,7 @@ class CartItem extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "\$18.99",
+                  "\$22.99",
                   style: TextStyle(
                     fontSize: 13,
                     color: Colors.grey.shade600,

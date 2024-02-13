@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PriceItem extends StatelessWidget {
-  const PriceItem({Key? key, required this.value, required this.subTitle}) : super(key: key);
+  const PriceItem({Key? key, required this.value, required this.subTitle})
+      : super(key: key);
 
   final String value;
   final String subTitle;
@@ -19,7 +20,7 @@ class PriceItem extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          "\$" + value,
+          "\$$value",
           style: TextStyle(
             fontSize: 16,
             color: Colors.grey.shade600,
